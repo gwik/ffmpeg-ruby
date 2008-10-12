@@ -1,2 +1,5 @@
 spec/data
 *.gem
+*.o
+*.bundle
+ext/Makefile
