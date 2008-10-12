@@ -1,11 +1,15 @@
 # ffmpeg-ruby
 
+[project home on github](http://github.com/gwik/ffmpeg-ruby)
+
 ## Summary
 
 ffmpeg-ruby is a ruby C extension binding to ffmpeg/libav* library.
 
-It's main purpose (at least for now) is to extract frame in order to make video thumbnails.
+It's main purpose is to extract frame in order to make video thumbnails.
 It also give access to main video attributes (frame rate, bit rate, duration, codecs, ...)
+
+So, it doesn't support encoding (at least for now).
 
 ## Installation
 
@@ -22,7 +26,7 @@ Patch it to rename RSHIFT macro :
 
     for file in `grep -ril RSHIFT .`; do ruby -i.bak -pe "gsub(/RSHIFT/, 'FFM_RSHIFT')" $file; done
 
-If your on Mac OS X as I do, you need to patch libswale too :
+If your on Mac OS X as I do, you need to patch libswscale too :
 
     ruby -i.bak -pe 'gsub(%r|defined\(ARCH_X86\) && defined\(CONFIG_GPL\)|, %q{defined(ARCH_X86) && defined(CONFIG_GPL) && !defined(__APPLE__)})' libswscale/rgb2rgb.c
 
