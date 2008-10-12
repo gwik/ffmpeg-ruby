@@ -1,0 +1,58 @@
+have_library: checking for main() in -lavformat... -------------------- yes
+
+"gcc -o conftest -I. -I/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin9.0 -I. -I/opt/ffmpeg/include  -arch ppc -arch i386 -Os -pipe -fno-common -W -Wall conftest.c  -L"." -L"/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib" -L"/opt/ffmpeg/lib" -L. -arch ppc -arch i386     -lruby -lavformat  -lpthread -ldl -lm  "
+ld: warning in /opt/ffmpeg/lib/libavformat.dylib, file is not of required architecture
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lavcodec... -------------------- yes
+
+"gcc -o conftest -I. -I/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin9.0 -I. -I/opt/ffmpeg/include  -arch ppc -arch i386 -Os -pipe -fno-common -W -Wall conftest.c  -L"." -L"/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib" -L"/opt/ffmpeg/lib" -L. -arch ppc -arch i386    -lavformat  -lruby -lavcodec -lavformat  -lpthread -ldl -lm  "
+ld: warning in /opt/ffmpeg/lib/libavformat.dylib, file is not of required architecture
+ld: warning in /opt/ffmpeg/lib/libavcodec.dylib, file is not of required architecture
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lavutil... -------------------- yes
+
+"gcc -o conftest -I. -I/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin9.0 -I. -I/opt/ffmpeg/include  -arch ppc -arch i386 -Os -pipe -fno-common -W -Wall conftest.c  -L"." -L"/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib" -L"/opt/ffmpeg/lib" -L. -arch ppc -arch i386    -lavcodec -lavformat  -lruby -lavutil -lavcodec -lavformat  -lpthread -ldl -lm  "
+ld: warning in /opt/ffmpeg/lib/libavcodec.dylib, file is not of required architecture
+ld: warning in /opt/ffmpeg/lib/libavformat.dylib, file is not of required architecture
+ld: warning in /opt/ffmpeg/lib/libavutil.dylib, file is not of required architecture
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lswscale... -------------------- yes
+
+"gcc -o conftest -I. -I/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin9.0 -I. -I/opt/ffmpeg/include  -arch ppc -arch i386 -Os -pipe -fno-common -W -Wall conftest.c  -L"." -L"/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib" -L"/opt/ffmpeg/lib" -L. -arch ppc -arch i386    -lavutil -lavcodec -lavformat  -lruby -lswscale -lavutil -lavcodec -lavformat  -lpthread -ldl -lm  "
+ld: warning in /opt/ffmpeg/lib/libavutil.dylib, file is not of required architecture
+ld: warning in /opt/ffmpeg/lib/libavcodec.dylib, file is not of required architecture
+ld: warning in /opt/ffmpeg/lib/libavformat.dylib, file is not of required architecture
+ld: warning in /opt/ffmpeg/lib/libswscale.dylib, file is not of required architecture
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
