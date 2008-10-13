@@ -3,7 +3,6 @@
  *
  */
 #include "ffmpeg.h"
-#include "libswscale/swscale.h"
 #include "ffmpeg_utils.h"
 
 VALUE rb_cFFMPEGFrame;

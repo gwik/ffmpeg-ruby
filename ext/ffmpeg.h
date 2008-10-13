@@ -5,8 +5,17 @@
 #ifndef __FFMPEG_H__
 #define __FFMPEG_H__
 
-#include "ruby.h"
 #include "libavformat/avformat.h"
+#include "libavutil/avutil.h"
+#include "libavcodec/avcodec.h"
+#include "libswscale/swscale.h"
+
+#ifdef RSHIFT
+ #undef RSHIFT
+#endif
+
+#include "ruby.h"
+
 
 /* Ruby classes and modules */
 RUBY_EXTERN VALUE rb_mFFMPEG;

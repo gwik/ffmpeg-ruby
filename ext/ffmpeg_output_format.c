@@ -4,7 +4,6 @@
  */
 #include "ffmpeg.h"
 #include "ffmpeg_utils.h"
-#include "libswscale/swscale.h"
 
 VALUE rb_cFFMPEGOutputFormat;
 

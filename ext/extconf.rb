@@ -2,7 +2,10 @@
 
 require 'mkmf'
 
+
 ffmpeg_include, ffmpeg_lib = dir_config("ffmpeg")
+dir_config("libswscale")
+
 $CFLAGS << " -W -Wall"
 #$LDFLAGS << " -rpath #{ffmpeg_lib}"
 

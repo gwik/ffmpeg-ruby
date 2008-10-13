@@ -13,24 +13,13 @@ So, it doesn't support encoding (at least for now).
 
 ## Installation
 
-ffmpeg-ruby requires a patched version of ffmpeg. This is due to a conflict between ruby and ffmpeg macros.
-Warning: If you do not patch it, all conversion between C numbers to Ruby won't be accurate (0 = 1 :( )
-
 Download latest sources of ffmpeg :
   
     wget http://ffmpeg.mplayerhq.hu/ffmpeg-export-snapshot.tar.bz2
     tar xjvf ffmpeg-export-snapshot.tar.bz2
     cd ffmpeg-export-20*
 
-Patch it to rename RSHIFT macro :
-
-    for file in `grep -ril RSHIFT .`; do ruby -i.bak -pe "gsub(/RSHIFT/, 'FFM_RSHIFT')" $file; done
-
-If your on Mac OS X as I do, you need to patch libswscale too :
-
-    ruby -i.bak -pe 'gsub(%r|defined\(ARCH_X86\) && defined\(CONFIG_GPL\)|, %q{defined(ARCH_X86) && defined(CONFIG_GPL) && !defined(__APPLE__)})' libswscale/rgb2rgb.c
-
-Configure with some prefix :
+Configure, optionally with some prefix :
 
 *--enable-swscale* is mandatory, feel free to add some configuration options
 
