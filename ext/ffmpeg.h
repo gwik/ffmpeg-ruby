@@ -5,10 +5,10 @@
 #ifndef __FFMPEG_H__
 #define __FFMPEG_H__
 
-#include "libavformat/avformat.h"
-#include "libavutil/avutil.h"
-#include "libavcodec/avcodec.h"
-#include "libswscale/swscale.h"
+#include <libavformat/avformat.h>
+#include <libavutil/avutil.h>
+#include <libavcodec/avcodec.h>
+#include <libswscale/swscale.h>
 
 #ifdef RSHIFT
  #undef RSHIFT
