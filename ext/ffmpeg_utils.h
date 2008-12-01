@@ -2,8 +2,8 @@
  * Licensed under the Ruby License. See LICENSE for details.
  *
  */
-#ifndef __FFMPEG_UTILS_H__
-#define __FFMPEG_UTILS_H__
+#ifndef RUBY_FFMPEG_UTILS_H__
+#define RUBY_FFMPEG_UTILS_H__
 
 #include "ffmpeg.h"
 
@@ -15,5 +15,4 @@ AVFrame * get_frame(VALUE self);
 VALUE rb_sym(const char *s);
 VALUE codec_type_id_to_sym(int codec_type);
 
-#endif __FFMPEG_UTILS_H__
-
+#endif

@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'ffmpeg'
-require 'rmagick'
+require 'RMagick'
 
 video = FFMPEG::InputFormat.new('spec/data/alligator.mp4')
 stream = video.first_video_stream

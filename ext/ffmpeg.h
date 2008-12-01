@@ -2,8 +2,8 @@
  * Licensed under the Ruby License. See LICENSE for details.
  *
  */
-#ifndef __FFMPEG_H__
-#define __FFMPEG_H__
+#ifndef RUBY_FFMPEG_H__
+#define RUBY_FFMPEG_H__
 
 #include <libavformat/avformat.h>
 #include <libavutil/avutil.h>

@@ -41,7 +41,6 @@ format_duration(VALUE self)
 static VALUE
 format_streams(VALUE self)
 {
-    int size;
     int i;
     AVFormatContext * format_context = get_format_context(self);
     volatile VALUE streams = rb_ary_new2(format_context->nb_streams);
@@ -151,10 +150,6 @@ init_format(VALUE self)
 {
     return self;
 }
-
-static void
-mark_format(AVFormatContext * format_context)
-{}
 
 static void 
 free_format(AVFormatContext * format_context)

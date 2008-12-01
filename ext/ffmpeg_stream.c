@@ -121,7 +121,6 @@ extract_next_frame(AVFormatContext * format_context, AVCodecContext * codec_cont
     int remaining = 0;
     int decoded;
     int frame_complete = 0;
-    int ret;
     int next;
     
     while(!frame_complete &&
