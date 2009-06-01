@@ -21,9 +21,7 @@ Download latest sources of ffmpeg :
 
 Configure, optionally with some prefix :
 
-*--enable-swscale* is mandatory, feel free to add some configuration options
-
-    ./configure --prefix=/opt/ffmpeg --enable-pthreads --enable-shared --enable-gpl --enable-swscale
+    ./configure --prefix=/opt/ffmpeg --enable-pthreads --enable-shared --enable-gpl
     make
     sudo make install
 
