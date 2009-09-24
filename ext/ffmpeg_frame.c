@@ -60,11 +60,11 @@ frame_to_ppm(VALUE self)
     int height = NUM2INT(rb_iv_get(self, "@height"));
     
     char header[255];
-    sprintf(header, "P6\n%dx%d\n255\n", width, height);
+    sprintf(header, "P6\n%d %d\n255\n", width, height);
     
     int size = strlen(header) + frame->linesize[0] * height + 1;
     char * data_string = malloc(size);
-    strcat(data_string, header);
+    strcpy(data_string, header);
     
     memcpy(data_string + strlen(header), frame->data[0], frame->linesize[0] * height);
     
