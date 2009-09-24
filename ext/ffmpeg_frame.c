@@ -62,7 +62,7 @@ frame_to_ppm(VALUE self)
     char header[255];
     sprintf(header, "P6\n%d %d\n255\n", width, height);
     
-    int size = strlen(header) + frame->linesize[0] * height + 1;
+    int size = strlen(header) + frame->linesize[0] * height;
     char * data_string = malloc(size);
     strcpy(data_string, header);
     
