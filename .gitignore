@@ -3,3 +3,5 @@ spec/data
 *.o
 *.bundle
 ext/Makefile
+Makefile
+ext/mkmf.log
