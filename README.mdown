@@ -52,35 +52,43 @@ Here is basic usage.
 
 ## Video attributes
 
-    require 'rubygems'
-    require 'ffmpeg'
-    
-    video = FFMPEG::InputFormat.new('alligator.mp4')
-    => #<FFMPEG::InputFormat:0x5fa3c0>
-    
-    video.public_methods - Object.public_instance_methods
-    => ["bit_rate", "filename", "duration", "has_stream_with_codec_type?", "first_video_stream", "human_duration", "has_video?", "video_stream_count", "streams", "has_audio?", "first_audio_stream", "audio_stream_count"]
-    
+```ruby
+require 'rubygems'
+require 'ffmpeg'
+
+video = FFMPEG::InputFormat.new('alligator.mp4')
+# => #<FFMPEG::InputFormat:0x5fa3c0>
+
+video.public_methods - Object.public_instance_methods
+# => ["bit_rate", "filename", "duration", "has_stream_with_codec_type?", "first_video_stream", "human_duration", "has_video?", "video_stream_count", "streams", "has_audio?", "first_audio_stream", "audio_stream_count"]
+```
+
 ## Streams
 
-    >> video.first_video_stream.public_methods - Object.public_instance_methods
-    => ["position", "duration", "index", "codec", "decode_frame", "seek"]
+```ruby
+video.first_video_stream.public_methods - Object.public_instance_methods
+# => ["position", "duration", "index", "codec", "decode_frame", "seek"]
+```
 
 ### Seeking in stream
 
-    video.first_video_stream.seek(10)
-    video.first_video_stream.position
-    => 10.2333333333333
+```ruby
+video.first_video_stream.seek(10)
+video.first_video_stream.position
+# => 10.2333333333333
+```
 
 As you can see, seeking is not very precise.
 
 ### Extracting frame
 
-    frame = video.first_video_stream.decode_frame
-    => #<FFMPEG::Frame:0x5c9874>
-    
-    "frame size #{frame.width}x#{frame.height}"
-    => "frame size 240x176"
+```ruby
+frame = video.first_video_stream.decode_frame
+# => #<FFMPEG::Frame:0x5c9874>
+
+"frame size #{frame.width}x#{frame.height}"
+# => "frame size 240x176"
+```
 
 ### Animated GIF example with RMagick
 
